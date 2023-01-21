@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.brand{
+    font-family:  'Shadows Into Light', cursive;
+    text-decoration: none;
+    margin-left: 0px;
+
+}
+
+.navbar {
+    background-color: #ddf0ec;
+
+}
+
+.piggy{
+    width: 50px;
+}
+
+.container{
+    margin: 0px;
+   
+}

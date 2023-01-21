@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			token : null,
 			message: null,
 			demo: [
 				{
@@ -21,6 +22,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
+			login: async (email, password) => {
+				
+					const opts = {
+						method : "POST",
+						headers : {
+							"Content-type": "application/json"
+						},
+						body : JSON.stringify({
+							email : email,
+							password : password
+						})
+					};
+					try {
+						const resp = await fetch("https://3001-lbdelilla-reactjwtauthe-wqej54reyb8.ws-eu83.gitpod.io/api/login", opts)
+						if (resp.status != 200){
+							alert("An error has occurred");
+							return false;
+						} 
+						const data = await resp.json();						
+						localStorage.setItem("token", data.access_token);
+						setStore({token: data.access_token})
+
+						return true;
+					}
+					catch(error){
+						console.error("There has been an error login in")
+					}
+			},
+			
 			getMessage: async () => {
 				try{
 					// fetching data from the backend
@@ -29,10 +59,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves
 					return data;
-				}catch(error){
+				}
+				catch(error){
 					console.log("Error loading message from backend", error)
 				}
 			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -46,7 +78,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			}
+			},
 		}
 	};
 };
