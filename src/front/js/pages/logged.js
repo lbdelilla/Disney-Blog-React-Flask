@@ -10,7 +10,7 @@ export const Logged = () => {
     var myHeaders = new Headers();
     myHeaders.append(
       "Authorization",
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NDMwMDk0MywianRpIjoiZWE1ZjJkM2EtM2I0Mi00NDI1LThhZmMtZWVkYzJhNGI3ZWIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RAdGVzdC5jb20iLCJuYmYiOjE2NzQzMDA5NDMsImV4cCI6MTY3NDMwMTg0M30.mYU9fRqE-rxtd8M3o_KJwkPdYbvX6LT3WZNU6IqX9D8"
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NDMwMTM5MywianRpIjoiNmE0ODgwOWEtMjliMy00YzRkLTg0YjUtNzhhZjYxNGI5NzU1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RAdGVzdC5jb20iLCJuYmYiOjE2NzQzMDEzOTMsImV4cCI6MTY3NDMwMjI5M30.NyyDotENzKCDtB243Z4xXZX5D2J-oh6oxK4QRv1Skvs"
     );
 
     var raw = "";
