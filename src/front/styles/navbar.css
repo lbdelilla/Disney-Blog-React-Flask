@@ -14,9 +14,15 @@
 
 .piggy{
     width: 50px;
+    margin-left: 15px;
 }
 
 .container{
     margin: 0px;
-   
+    justify-content: end;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: #0d8369;
 }

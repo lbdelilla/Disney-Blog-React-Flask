@@ -41,11 +41,18 @@ def protected():
 if __name__ == "__main__":
     app.run()
 
-@api.route('/hello', methods=['POST', 'GET'])
-def handle_hello():
+
+@api.route('/register', methods=['POST'])
+def create_user():
+    body = json.loads(request.data)
+    user = User(email = body["email"], password= body["password"], is_active = True)
+    db.session.add(user)
+    db.session.commit()
 
     response_body = {
-        "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
+        "msg": " The new user has been created correctly "
     }
 
     return jsonify(response_body), 200
+
+
