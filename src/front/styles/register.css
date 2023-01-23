@@ -1,5 +1,6 @@
 /* Importing fonts from Google */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 /* Reseting */
 * {
@@ -7,10 +8,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 body {
-  background: #ecf0f3;
+  background: #ddf0ec;
 }
 
 .wrapper {
@@ -84,4 +86,9 @@ body {
     margin: 30px 20px;
     padding: 40px 15px 15px 15px;
   }
+}
+
+.wrapper .disclaimer {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 14px;
 }

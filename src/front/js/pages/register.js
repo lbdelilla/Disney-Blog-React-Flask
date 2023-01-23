@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 import "../../styles/register.css";
 import monster4 from "../../img/monster4.png"
@@ -6,6 +7,7 @@ import monster4 from "../../img/monster4.png"
 
 
 export const Register = ()=>{
+    const { store, actions } = useContext(Context);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate("");
@@ -32,6 +34,10 @@ export const Register = ()=>{
                 <input type="password" name="password" id="pwd" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
             </div>
             <button className="btn mt-3" onClick={handleClick} >Register</button>
+            &nbsp; 
+            <div className="disclaimer text-center mt-4" >
+               You will be redirected to Login after you register
+            </div>
     </div>
     )
 }

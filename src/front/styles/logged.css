@@ -8,23 +8,15 @@
     
 }
 
-h1, h4{
+h1, h4, h2{
     justify-content: center;
     font-family: 'Shadows Into Light', cursive;
 }
 
-
-
-.btn-funky-moon {
-    background: #654ea3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #60bba3, #2e9479);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #60bba3, #2e9479); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #fff;
-    border: 5px solid #eee;
-    border-radius: 35px;
-    margin-top: 25px;
+h2{
+    margin: 5%;
 }
 
-.monster2{
+.monster2, .monster5{
     width: 30%;
 }

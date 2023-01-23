@@ -49,9 +49,12 @@ export const Login = () => {
         Login
       </button>
       <div className="text-center fs-6">
-        <Link to={"/register"}>
-          <span className="register">Register</span>
-        </Link>
+      &nbsp;
+        <div> 
+          <Link to={"/register"}>
+            <span className="register">Register here</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

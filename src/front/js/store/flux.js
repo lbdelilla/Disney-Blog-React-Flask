@@ -53,7 +53,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 						password : password
 					})
 				};
+				try {
+					const resp = await fetch("https://3001-lbdelilla-reactjwtauthe-wqej54reyb8.ws-eu83.gitpod.io/api/register", opts)
+					if (resp.status != 200){
+						alert("An error has occurred while creating the user");
+						return false;
+					} 
+					const data = await resp.json();	
+					console.log(data);					
 
+					return true;
+				}
+				catch(error){
+					console.error("There has been an error creating a user")
+				}
 			},
 			
 			logout: ()=>{
