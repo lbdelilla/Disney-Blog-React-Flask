@@ -10,21 +10,8 @@ export const Logged = () => {
     const token = localStorage.getItem("token");
 
     const getUser = async () => {
-      let headersList = {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      };
-  
-      let response = await fetch(
-        "https://3001-lbdelilla-reactjwtauthe-wqej54reyb8.ws-eu83.gitpod.io/api/private",
-        {
-          headers: headersList,
-        }
-      );
-  
-      let data = await response.json();
-    
-      setUserData(data);
+      const user = await actions.getUserData();
+      setUserData(user);
     };
       
     useEffect(() => {
