@@ -22,14 +22,11 @@ export const Logged = () => {
     return (
     <div> {store.token && store.token != "" && store.token != undefined ? (
       <div className="center">
-        <h1 >You are in The Cutie Zone </h1>
-        <h4> Press log out if there´s to much cuteness for you!</h4>
-        <img className="monster2" src={monster} alt="a very cute monster"/> 
+        
       </div>
     ) : (
       <div className="center">
-        <h2>You need to login or register to enter the cutie zone</h2>
-        <img className="monster5" src={monster5} alt="a very cute green monster"/>
+        <h2>Debes estar logueado para acceder a esta página</h2>
       </div>
     )}
     </div> 

@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/login.css";
-import monster4 from "../../img/monster4.png";
+import minnie from "../../img/minnie-face.png";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
@@ -20,9 +20,9 @@ export const Login = () => {
   return (
     <div className="wrapper">
       <div className="logo">
-        <img src={monster4} alt="a very cut pig with winter clothes" />
+        <img src={minnie} alt="a very cut pig with winter clothes" />
       </div>
-      <div className="text-center mt-4 name">The Cutie Zone</div>
+      <div className="text-center mt-4 name">¡Ingresa y accede a contenido exclusivo!</div>
       <div className="form-field d-flex align-items-center">
         <span className="far fa-user"></span>
         <input
@@ -41,18 +41,18 @@ export const Login = () => {
           name="password"
           id="pwd"
           value={password}
-          placeholder="Password"
+          placeholder="Contraseña"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <button className="btn mt-3" onClick={handleClick}>
-        Login
+        Ingresar
       </button>
       <div className="text-center fs-6">
       &nbsp;
         <div> 
           <Link to={"/register"}>
-            <span className="register">Register here</span>
+            <span className="register">Registrate aquí</span>
           </Link>
         </div>
       </div>

@@ -1,14 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 
 
-
-.title, h4{
-    font-family: 'Shadows Into Light', cursive;
+.title, .sub-title{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: white;
 }
 
 h4{
     padding-top: 20px;
 }
-.monster-bg{
-    width: 60%;
+
+.home-bg{
+    width: 100vw;
+  
+    
 }
+
+/* BUTTON */
+
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+} 
+
+.start-btn {
+  font-size: x-large;
+  color: #304ea5;
+  text-transform: uppercase;
+  padding: 0.5em 1.5em;
+  background: 	#fbbe4f;
+  border: #fbbe4f;
+  border-radius: 0.75em;
+  margin: 2em;
+  font-family: 'Mouse Memoirs', sans-serif;
+}
+
+button.start-btn:hover{
+    cursor: pointer;
+    background-color:  #f5ac25;
+    color: #304ea5;
+  }

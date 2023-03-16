@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 import "../../styles/register.css";
-import monster4 from "../../img/monster4.png"
+import daisy from "../../img/daisy-duck-face.png"
 
 
 
@@ -20,23 +20,23 @@ export const Register = ()=>{
     return (
         <div className="wrapper">
             <div className="logo">
-                <img src={monster4} alt="a very cut pig with winter clothes" />
+                <img src={daisy} alt="a very cut pig with winter clothes" />
             </div>
             <div className="text-center mt-4 name">
-                Sign up to be a cutie!
+                ¡Registrate!
             </div>
             <div className="form-field d-flex align-items-center">
                 <span className="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Username" value={email} onChange={(e)=> setEmail(e.target.value)} />
+                <input type="text" name="userName" id="userName" placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)} />
             </div>
             <div className="form-field d-flex align-items-center">
                 <span className="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                <input type="password" name="password" id="pwd" placeholder="Contraseña" value={password} onChange={(e)=> setPassword(e.target.value)}/>
             </div>
-            <button className="btn mt-3" onClick={handleClick} >Register</button>
+            <button className="btn mt-3" onClick={handleClick} >Registro</button>
             &nbsp; 
             <div className="disclaimer text-center mt-4" >
-               You will be redirected to Login after you register
+               Luego del registro serás redirigido al ingreso.
             </div>
     </div>
     )

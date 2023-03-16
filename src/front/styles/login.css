@@ -10,7 +10,7 @@
 }
 
 body {
-    background: #ddf0ec;
+    background: #304ea5;
 }
 /* #ecf0f3 */
 .wrapper {
@@ -20,7 +20,7 @@ body {
     padding: 40px 30px 30px 30px;
     background-color: #ecf0f3;
     border-radius: 15px;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    box-shadow: 13px 13px 20px #223b84, -13px -13px 20px #223b84;
 }
 
 .logo {
@@ -41,11 +41,11 @@ body {
 
 .wrapper .name {
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: medium;
     letter-spacing: 1.3px;
     padding-left: 10px;
     color: #555;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 
 .wrapper .form-field input {
@@ -75,7 +75,7 @@ body {
     box-shadow: none;
     width: 100%;
     height: 40px;
-    background-color: #519281;
+    background-color: #8fa6e8;
     color: #fff;
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1,
@@ -84,7 +84,7 @@ body {
 }
 
 .wrapper .btn:hover {
-    background-color: #2e9479;
+    background-color: #8fa6e8;
 }
 
 .wrapper a {
