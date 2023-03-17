@@ -1,27 +1,28 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 // import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-// import "../../styles/demo.css";
+import "../../styles/characters.css";
 
 import { Card } from "../component/card";
-// import { Navigation } from "../component/Navigation.jsx";
+import { Navigation } from "../component/navigation";
 
 export const Characters = () => {
   const { store, actions } = useContext(Context);
 
   const characters = store.characters;
+  console.log(characters)
   const charactersData = characters?.data
   console.log(charactersData)
  
 
   return (
     <div className="card-container">
-      <h1 className="page-title text-light text-center">Personajes del universo Disney</h1>
+      <h1 className="page-title text-light text-center mt-5">Personajes del universo Disney</h1>
       <div>
-        {/* <Navigation /> */}
+        <Navigation />
       </div>
       <div className="row disney-cards justify-content-center">
-        {charactersData?.map((e) => {
+        {characters?.map((e, index) => {
           return (
             <Card
               key={e.id}
@@ -30,7 +31,6 @@ export const Characters = () => {
               films={e.films}
               shortFilms={e.shortFilms}
               tvShows={e.tvShows}
-              id={e.id}
               videoGames={e.videoGames}
               parkAttractions={e.parkAttractions}
               allies={e.allies}
@@ -40,7 +40,7 @@ export const Characters = () => {
         })}
       </div>
       <div>
-        {/* <Navigation /> */}
+        <Navigation />
       </div>
     </div>
   );

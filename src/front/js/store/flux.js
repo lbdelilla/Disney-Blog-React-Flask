@@ -109,15 +109,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			  }
 			);
 			const data = await response.json();
-			  console.log(data)
-			setStore({ characters: data, next: data.nextPage });
+			setStore({ characters: data.data, next: data.nextPage });
+    
 		},
 		  setCharacters: (data) => {
 			setStore({
-			  characters: data.results,
+			  characters: data.data,
 			  next: data.nextPage,
 			  prev: data.previousPage,
 			});
+        console.log(data.data)
 		  },
 		  setFavorites: (data) => {
 			setStore({ favorites: getStore().favorites.concat(data) });

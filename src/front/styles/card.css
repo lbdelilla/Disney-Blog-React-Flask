@@ -16,11 +16,12 @@
   
   .cards {
     display: grid;
-    width:20rem;
-    height:23.5rem;
+    width:14.5rem;
+    height:17rem;
     margin: 4rem 5vw;
     padding: 0;
     list-style-type: none;
+   
   }
   
   .card {
@@ -30,6 +31,8 @@
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
+    border: #304ea5;
+    
   }
   
   .card__image {      
@@ -48,22 +51,25 @@
     background-color: var(--surface-color);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
+    
   }
   
   .card:hover .card__overlay {
     transform: translateY(0);
+    
   }
   
   .card__header {
     position: relative;
     display: flex;
-    align-items: center;
-    /* gap: 1em; */
+    /* align-items: center; */
+    gap: 1em;
     padding: 1.5em;
     border-radius: calc(var(--curve) * 1px) 0 0 0;    
     background-color: var(--surface-color);
     transform: translateY(-100%);
     transition: .2s ease-in-out;
+ 
   }
   
   .card__arc {
@@ -84,7 +90,7 @@
   
   .card__title {
     font-size: 2em;
-    margin: 0 0 .2em;
+    margin: 0;
     color: 	#746bab;
     font-family: 'Mouse Memoirs', sans-serif;
   }
@@ -99,14 +105,14 @@
   
   
   .card__description {
-    padding: 0 2em 2em;
+    padding: 0 1em 1em;
     margin: 0;
     color:#746bab;
     font-family: 'Mouse Memoirs', sans-serif;  
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+    -webkit-line-clamp: 4;
+    /* overflow: hidden; */
   }  
 
 

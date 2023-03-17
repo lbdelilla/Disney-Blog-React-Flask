@@ -1,15 +1,6 @@
 /* Importing fonts from Google */
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 
-/* Reseting */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  
-}
-
 
 .wrapper {
   max-width: 350px;

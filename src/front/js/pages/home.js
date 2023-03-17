@@ -7,10 +7,17 @@ export const Home = () => {
   return (
     <div className="homebg text-center mt-1">
       <h1 className="title">¡Bienvenido al blog de Disney!</h1>
-	  <Link to="/register">
-	  	<button type="button" className="btn start-btn btn-white btn-animate">Comenzar</button>
+      <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+      <Link to="/register">
+        <button type="button" className="btn start-btn btn-white btn-animate">
+          Comenzar
+        </button>
       </Link>
-	  <div>
+     
+      <div>
         <Castle />
       </div>
     </div>
