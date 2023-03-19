@@ -10,6 +10,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Logged } from "./pages/logged";
 import { Characters } from "./pages/characters";
+import { Games } from "./pages/games";
 
 //create your first component
 const Layout = () => {
@@ -28,6 +29,7 @@ const Layout = () => {
                         <Route element={<Logged />} path="/private" />
                         <Route element={<Register />} path="/register"/>
                         <Route element={<Characters />} path="/characters"/>
+                        <Route element={<Games />} path="/games"/>
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />

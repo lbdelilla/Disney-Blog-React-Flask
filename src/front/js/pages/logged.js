@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/logged.css";
-import monster from "../../img/monster2.png"
-import monster5 from "../../img/monster5.png"
+
 
 export const Logged = () => {
     const { store, actions } = useContext(Context);

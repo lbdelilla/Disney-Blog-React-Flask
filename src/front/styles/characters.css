@@ -14,3 +14,8 @@
     color: #304ea5;
     font-size: larger;
 }
+
+.page-link:hover{
+    cursor: pointer;
+}
+
