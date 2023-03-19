@@ -26,7 +26,6 @@ export const MemoryGame = () => {
     { id: 6, src: minnie },
   ];
 
-  // Función que mezcla el arreglo de imágenes
   const shuffleImages = (array) => {
     let currentIndex = array.length;
     let temporaryValue;
@@ -45,31 +44,20 @@ export const MemoryGame = () => {
   };
 
   useEffect(() => {
-    // Duplicamos el arreglo de imágenes
     let duplicatedImages = [...images, ...images];
-
-    // Mezclamos las imágenes
     duplicatedImages = shuffleImages(duplicatedImages);
-
-    // Actualizamos el estado de cartas con las imágenes mezcladas
     setCards(duplicatedImages);
   }, []);
 
   const handleCardClick = (index) => {
     if (!solved.includes(index) && flipped.length < 2) {
-      // Si la carta no está resuelta y hay menos de 2 cartas volteadas
       if (flipped.length === 1 && cards[index].id === cards[flipped[0]].id) {
-        // Si hay una carta volteada y las cartas coinciden, agregamos ambas a la lista de cartas resueltas
         setSolved([...solved, flipped[0], index]);
-        // Limpiamos la lista de cartas volteadas
         setFlipped([]);
-        // Aumentamos los puntos
         setPoints((points) => points + 2);
       } else {
-        // Si no hay una carta volteada o las cartas no coinciden, agregamos la carta volteada a la lista de cartas volteadas
         setFlipped([...flipped, index]);
         if (flipped.length === 1) {
-          // Si hay una carta volteada, pero no coincide con la carta actual, ocultamos las cartas después de un tiempo
           setTimeout(() => {
             setFlipped([]);
           }, 700);
