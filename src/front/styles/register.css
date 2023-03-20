@@ -1,19 +1,6 @@
 /* Importing fonts from Google */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 
-/* Reseting */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  
-}
-
-body {
-  background: #ddf0ec;
-}
 
 .wrapper {
   max-width: 350px;
@@ -21,7 +8,7 @@ body {
   padding: 40px 30px 30px 30px;
   background-color: #ecf0f3;
   border-radius: 15px;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  box-shadow: 13px 13px 20px #223b84, -13px -13px 20px #223b84;
 }
 
 .wrapper .name {
@@ -89,6 +76,7 @@ body {
 }
 
 .wrapper .disclaimer {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Mouse Memoirs', sans-serif;
   font-size: 14px;
+  color: grey
 }

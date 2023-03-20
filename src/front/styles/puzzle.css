@@ -1,0 +1,16 @@
+
+.select-img-btn, .restart-puzzle, .diff-btn{
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.select-img-btn{
+    width: 350px;
+    height: 200px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-color: none;
+}
+

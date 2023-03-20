@@ -1,0 +1,16 @@
+.games-btns{
+  margin: auto
+}
+
+.games-title{
+    color: white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: xx-large;
+    margin-top: 1.5em;
+}
+
+.games-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

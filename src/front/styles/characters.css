@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+.page-title{
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.pagination{
+    margin: 2em;
+}
+
+.page-link{
+    /* background-color: 	#fbbe4f; */
+    /* border: #304ea5; */
+    color: #304ea5;
+    font-size: larger;
+}
+
+.page-link:hover{
+    cursor: pointer;
+}
+

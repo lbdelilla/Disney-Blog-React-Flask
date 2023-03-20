@@ -1,28 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-.brand{
-    font-family:  'Shadows Into Light', cursive;
-    text-decoration: none;
-    margin-left: 0px;
+
+.disney-navbar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 
 }
 
-.navbar {
-    background-color: #ddf0ec;
-
-}
-
-.piggy{
+.mickey{
     width: 50px;
     margin-left: 15px;
 }
 
-.container{
-    margin: 0px;
-    justify-content: end;
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 0px 5px 
+    
+
 }
 
-.btn:hover{
+.nav-btn{
+    color: white;
+    font-size: x-large;
+}
+
+.nav-btn:hover{
     cursor: pointer;
-    color: #0d8369;
+    color: #e1c849;
+}
+
+.cont-nav{
+    display: flex;
+    flex-direction: row;
 }

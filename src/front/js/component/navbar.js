@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/navbar.css";
-import monster from "../../img/monster4.png"
+import mickey from "../../img/mickey-head.png"
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
@@ -13,21 +13,35 @@ export const Navbar = () => {
 		navigate('/')
 	}
 	return (
-		<nav className="navbar navbar-light ">
+		<nav className=" navbar disney-navbar navbar-light ">
 			<div>
-			<img src={monster} alt="a very cute pig with winter clothes" className="piggy"/>
+			<img src={mickey} alt="a very cute pig picture of mickey mouse head" className="mickey"/>
 			</div>
-			<div className="container">
-				<div className="ml-auto">
+			<div className="nav-container">
+				<div className="ml-auto cont-nav">
+					<div className="not-loggued-nav">
 					<Link to="/">
-						<button className="btn">Home</button>
+						<button className="nav-btn btn">Inicio</button>
 					</Link>
-					{! store.token ?
-						<Link to="/login">
-							<button className="btn">Login</button>
-						</Link>
+					<Link to="/characters">
+						<button className="nav-btn btn">Personajes</button>
+					</Link>
+					</div>
+					{(! store.token) ?
+						(<Link to="/login">
+							<button className="nav-btn btn">Ingresar</button>
+						</Link>)
+						
 					: 
-						<button className="btn"onClick={handleClick}>Log out</button>
+					<div className="loggued-nav">
+						<Link to="/videos">
+							<button className="nav-btn btn" disabled>Videos</button>
+						</Link>
+						<Link to="/games">
+							<button className="nav-btn btn">Juegos</button>
+						</Link>
+						<button className="nav-btn btn"onClick={handleClick}>Cerrar Sesión</button>
+					</div>
 					}
 				</div>
 			</div>

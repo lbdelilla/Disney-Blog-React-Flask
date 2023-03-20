@@ -1,0 +1,78 @@
+.tic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.tic-title {
+  font-size: xxx-large;
+  font-family: "Mouse Memoirs", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.tic-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 350px;
+  height: 350px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 100px;
+  /* box-shadow: 0 0 0 1px #333333; */
+  border: 3px solid #ffffff;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.status {
+  font-size: xx-large;
+  margin-top: 30px;
+  color: white;
+}
+
+.game-restart {
+  font-size: large;
+  color: #304ea5;
+  text-transform: uppercase;
+  padding: 0.5em 1.5em;
+  background: #fbbe4f;
+  border: #fbbe4f;
+  border-radius: 0.75em;
+  margin-top: 2rem;
+  font-family: "Mouse Memoirs", sans-serif;
+}
+
+.game-restart:hover {
+  cursor: pointer;
+  background-color: #f5ac25;
+  color: #304ea5;
+}
+
+.game-and-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  margin: 1.5rem 0 3.7rem 0;
+}
+
+.right-div{
+  width: 20rem;
+
+}
