@@ -35,7 +35,7 @@ export const Navbar = () => {
 					: 
 					<div className="loggued-nav">
 						<Link to="/videos">
-							<button className="nav-btn btn">Videos</button>
+							<button className="nav-btn btn" disabled>Videos</button>
 						</Link>
 						<Link to="/games">
 							<button className="nav-btn btn">Juegos</button>
