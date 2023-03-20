@@ -33,6 +33,7 @@
     color: white;
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: xxx-large;
+    margin:1em;
   }
 
   .memo-points, .game-over{
