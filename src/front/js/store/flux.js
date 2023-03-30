@@ -31,11 +31,11 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            "https://3001-lbdelilla-reactjwtauthe-d0j77k9fs9n.ws-eu90.gitpod.io/api/login",
+            `${BACKEND_URL}/api/login`,
             requestOptions
           );
           if (resp.status != 200) {
-            alert("An error has occurred");
+            console.log("An error has occurred");
             return false;
           }
           const data = await resp.json();
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            "https://3001-lbdelilla-reactjwtauthe-d0j77k9fs9n.ws-eu90.gitpod.io/api/register",
+            `${BACKEND_URL}/api/register`,
             requestOptions
           );
           if (resp.status != 200) {
@@ -87,7 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const res = await fetch(
-            "https://3001-lbdelilla-reactjwtauthe-d0j77k9fs9n.ws-eu90.gitpod.io/api/private",
+            `${BACKEND_URL}/api/private`,
             requestOptions
           );
           const data = await res.json();

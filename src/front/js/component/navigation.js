@@ -24,15 +24,15 @@ export function Navigation() {
  
   return (
     <nav aria-label="Page navigation">
-      <ul className="pagination  justify-content-center">
+      <ul className="pagination  justify-content-end">
         {store.prev != null ? (
         <li className="page-item">
-          <a className="page-link " onClick={()=>handlePrevious()}>Previous</a>
+          <a className="page-link " onClick={()=>handlePrevious()}>Anterior</a>
         </li>
          ) : null} 
         {store.next != null ? ( 
         <li className="page-item">
-          <a className="page-link"onClick={()=>handleNext()}>Next</a>
+          <a className="page-link"onClick={()=>handleNext()}>Siguiente</a>
         </li>
         ) : null} 
       </ul>

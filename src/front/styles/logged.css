@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-
 
 .center{
     display: flex;
@@ -8,15 +6,13 @@
     
 }
 
-h1, h4, h2{
+.must-be-loggued, .video-title{
     justify-content: center;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: white;
+    margin: 1.5em 0 1em 0;
 }
 
-h2{
-    margin: 5%;
-}
-
-.monster2, .monster5{
-    width: 30%;
+.video-100{
+    margin-bottom: 1em;
 }

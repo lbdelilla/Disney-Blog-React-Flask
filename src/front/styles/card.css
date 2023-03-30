@@ -5,9 +5,9 @@
     --curve: 40;
   }
   
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
   
   body {
     font-family: 'Mouse Memoirs', sans-serif;

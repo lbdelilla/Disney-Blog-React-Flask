@@ -12,6 +12,8 @@ import { Logged } from "./pages/logged";
 import { Characters } from "./pages/characters";
 import { Games } from "./pages/games";
 
+
+
 //create your first component
 const Layout = () => {
     //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -30,6 +32,7 @@ const Layout = () => {
                         <Route element={<Register />} path="/register"/>
                         <Route element={<Characters />} path="/characters"/>
                         <Route element={<Games />} path="/games"/>
+      
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />

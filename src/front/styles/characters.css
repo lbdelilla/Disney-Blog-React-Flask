@@ -19,3 +19,27 @@
     cursor: pointer;
 }
 
+.search-div{
+    width: fit-content;
+    margin-top: 2em;
+   
+}
+
+.search-btn{
+    font-size: large;
+}
+.search-input{
+    width:max-content;
+}
+
+::placeholder{
+    font-size: large;
+    color: #304ea5;
+  
+}
+
+.nav-search-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
