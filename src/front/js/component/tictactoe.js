@@ -41,7 +41,7 @@ export const TicTacToe = () => {
   const renderCell = (index) => {
     const value = board[index];
     return (
-      <div className="cell" onClick={() => handleClick(index)}>
+      <div className="tic-cell" onClick={() => handleClick(index)}>
         {value === "Minnie" ? <img width="80px" height="80px" src={minnieSVG} alt="Minnie"/> : null}
         {value === "Mickey" ? <img width="80px" height="80px" src={mickeySVG} alt="Mickey"/> : null}
       </div>

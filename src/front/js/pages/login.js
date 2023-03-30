@@ -9,12 +9,22 @@ export const Login = () => {
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    actions.login(email, password);
-    navigate("/private");
+  const handleClick = async () => {
+    try {
+      const loginSuccesful = await actions.login(email, password);
+      if (loginSuccesful) {
+        navigate("/private");
+      } else {
+        setError("Correo electrónico o contraseña incorrectos");
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Ocurrió un error al iniciar sesión. Por favor, inténtalo de nuevo.");
+    }
   };
 
   return (
@@ -48,6 +58,7 @@ export const Login = () => {
       <button className="btn mt-3" onClick={handleClick}>
         Ingresar
       </button>
+      {error && <div className="text-danger text-center mt-3">{error}</div>}
       <div className="text-center fs-6">
       &nbsp;
         <div> 

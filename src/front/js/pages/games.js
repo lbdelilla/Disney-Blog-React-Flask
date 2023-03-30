@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 import { TicTacToe } from "../component/tictactoe";
 import { MemoryGame } from "../component/memory";
-import { PuzzleGame } from "../component/puzzle";
+
 import "../../styles/games.css";
 
 export const Games = () => {
   const [showTicTac, setShowTicTac] = useState(true);
   const [showMemory, setShowMemory] = useState(false);
-  const [showPuzzle, setShowPuzzle] = useState(false);
+  // const [showPuzzle, setShowPuzzle] = useState(false);
 
   const handleTicClick = () => {
     setShowTicTac(true);
     setShowMemory(false);
-    setShowPuzzle(false);
+    // setShowPuzzle(false);
   };
 
   const handleMemoClick = () => {
     setShowTicTac(false);
     setShowMemory(true);
-    setShowPuzzle(false);
+    // setShowPuzzle(false);
   };
 
   const handlePuzzClick = () => {
     setShowTicTac(false);
     setShowMemory(false);
-    setShowPuzzle(true);
+    // setShowPuzzle(true);
   };
 
   return (
@@ -55,13 +55,13 @@ export const Games = () => {
             className="btn btn-outline-light"
             onClick={handlePuzzClick}
             disabled>
-            Puzzle
+            Proximamente
           </button>
         </div>
       </div>
       {showTicTac ? <TicTacToe /> : null}
       {showMemory ? <MemoryGame /> : null}
-      {showPuzzle ? <PuzzleGame /> : null}
+      {/* {showPuzzle ? <PuzzleGame /> : null} */}
     </>
   );
 };
