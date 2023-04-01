@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 // import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/characters.css";
@@ -11,9 +11,23 @@ export const Characters = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searched, setSearched] = useState(false);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [favoriteCharacters, setFavoriteCharacters] = useState([]);
 
   const characters = store.characters;
   const charactersData = characters?.data;
+  const favorites = store.favorites?.results;
+
+  useEffect(() => {
+    // Obtener la lista de personajes favoritos
+    const favoriteIds = favorites.map((favorite) => favorite.id);
+
+    // Crear un objeto con los personajes favoritos y su estado de favorito
+    const favoriteCharactersData = charactersData.map((character) => ({
+      id: character._id,
+      isFavorite: favoriteIds.includes(character._id),
+    }));    // Establecer el estado local de los personajes favoritos
+    setFavoriteCharacters(favoriteCharactersData);
+  }, [charactersData, favorites]);
 
   const searchCharacters = async (name) => {
     try {
@@ -75,7 +89,7 @@ export const Characters = () => {
         {searched
           ? filteredCharacters.map((character) => (
               <Card
-                key={character.id}
+                key={character._id}
                 image={character.imageUrl}
                 name={character.name}
                 films={character.films}
@@ -85,11 +99,13 @@ export const Characters = () => {
                 parkAttractions={character.parkAttractions}
                 allies={character.allies}
                 enemies={character.enemies}
+                cardKey={character._id}
+                id={character._id}
               />
             ))
-          : characters?.map((e, index) => (
+          : characters?.map((e) => (
               <Card
-                key={e.id}
+                key={e._id}
                 image={e.imageUrl}
                 name={e.name}
                 films={e.films}
@@ -99,6 +115,8 @@ export const Characters = () => {
                 parkAttractions={e.parkAttractions}
                 allies={e.allies}
                 enemies={e.enemies}
+                cardKey={e._id}
+                id={e._id}
               />
             ))}
       </div>

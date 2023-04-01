@@ -26,7 +26,7 @@
   
   .card {
     position: relative;
-    display: block;
+    display: inline-block;
     height: 100%;  
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
@@ -35,6 +35,26 @@
     
   }
   
+  .favorites-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: 10px 15px 0 0;
+    background-color: transparent;
+    border: none;
+    color: rgb(69, 69, 69);
+    font-size: x-large;
+    text-shadow: 2px, 2px, 2px #fff;
+  }
+
+  .nav-item{
+    border-radius: 5px;
+    padding: 0.4em;
+    border: none;
+    
+  }
+
   .card__image {      
     width: 100%;
     height: 325px;
@@ -51,9 +71,20 @@
     background-color: var(--surface-color);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
+    height: 80%;
     
   }
   
+  .card_content{
+      /* position: absolute; */
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: 0.2em;
+      max-height: calc(100vh - 17rem);
+    }
+  
+
   .card:hover .card__overlay {
     transform: translateY(0);
     

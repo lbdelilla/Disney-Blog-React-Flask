@@ -36,3 +36,12 @@
     display: flex;
     flex-direction: row;
 }
+
+.badge {
+    margin-right: 4px;
+}
+
+
+.fav-btn{
+   margin-left: 58%;
+}
